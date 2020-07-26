@@ -20,7 +20,7 @@ db = scoped_session(sessionmaker(bind=engine))
 
 @app.route("/")
 def index():
-    return ("Hola Giss, puedes usar el servicio distintas maneras si solo pondes '/producto/' te mostrará todos, los parametros siguientes son 'id_prod/val_1/val_2'")
+    return ("Hola Giss, puedes usar el servicio distintas maneras si solo pones '/producto/' te mostrará todos, los parametros siguientes son 'id_prod/val_1/val_2' se pueden omitir pero siempre van en ese orden")
 
 
 @app.route("/producto/")
