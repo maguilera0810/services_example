@@ -1,1 +1,2 @@
-# services_example
+# INSTALAR DEPENDENCIAS
+pip3 install -r requirements.txt
