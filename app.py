@@ -1,4 +1,3 @@
-import os
 from flask import Flask
 from flask_session import Session
 from sqlalchemy import create_engine
@@ -21,7 +20,7 @@ db = scoped_session(sessionmaker(bind=engine))
 
 @app.route("/")
 def index():
-    return ("Hola Mausss")
+    return ("Hola Giss, puedes usar el servicio distintas maneras si solo pondes '/producto/' te mostrará todos, los parametros siguientes son 'id_prod/val_1/val_2'")
 
 
 @app.route("/producto/")
@@ -38,7 +37,7 @@ def api(id_prod="-1", val1="-1", val2="-1"):
     if val2 != "-1":
         l.append(f"val_2 = {val2}")
 
-    if len(l)>0:
+    if len(l) > 0:
         query += " WHERE " + " AND ".join(l)
     print(query)
     listado = db.execute(query).fetchall()
